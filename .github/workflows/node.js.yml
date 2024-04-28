@@ -7,10 +7,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
       # Here is the deployment action
-      - name: Upload from public_html via FTP
+      - name: Build node app
+        with:
+          node-version: 18
+      - run: npm ci
+      - name: Upload from dist via FTP
         uses: airvzxf/ftp-deployment-action@latest
         with:
           server: ${{ secrets.FTP_SERVER }}
           user: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          local_dir: app/dist
+          remote_dir: app
