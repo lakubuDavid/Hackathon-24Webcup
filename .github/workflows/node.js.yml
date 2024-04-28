@@ -7,9 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Build node app
       - uses: actions/setup-node@v4
       # Here is the deployment action
-      - name: Build node app
         with:
           node-version: 18
       - run: npm build
