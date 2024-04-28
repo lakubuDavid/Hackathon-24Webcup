@@ -1,2 +1,3 @@
 .vscode/
 bun.lockb
+app/dist/
