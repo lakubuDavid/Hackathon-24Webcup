@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "dev": "tsx watch src/index.tsx",
+    "build": "rm -rf dist/* && node esbuild.mjs"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.11.1",
+    "hono": "^4.2.8",
+    "hono-jsx-router": "^1.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.17",
+    "esbuild": "0.20.2",
+    "tsx": "^4.7.1"
+  },
+  "type": "module"
+}
