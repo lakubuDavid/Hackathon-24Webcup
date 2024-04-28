@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "types": [
+      "node"
+    ],
+    "jsx": "react-jsx",
+    "jsxImportSource": "hono/jsx",
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["src/components/*"],
+    },
+    // "allowImportingTsExtensions":true,
+    // "emitDeclarationOnly": true,
+    // "declaration": true,
+  },
+  "include": ["src/**/*"],      // File paths to include in compilation
+  "exclude": ["node_modules"]   // File paths to exclude from compilation
+}
