@@ -3,7 +3,7 @@ import * as esbuild from 'esbuild'
 await esbuild.build({
   entryPoints: ['src/index.tsx'],
   bundle: true,
-  outdir: "dist",
+  outfile: "dist/index.cjs",
   platform: 'node',
   target: "node18",
   treeShaking:true,
