@@ -12,7 +12,7 @@ jobs:
       - name: Build node app
         with:
           node-version: 18
-      - run: npm ci
+      - run: npm build
       - name: Upload from dist via FTP
         uses: airvzxf/ftp-deployment-action@latest
         with:
