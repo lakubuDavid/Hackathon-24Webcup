@@ -14,7 +14,7 @@ router.get("/", (c) => {
 
 router.get("/*", (c) => {
   const nun = new nunjucks.Environment(
-    new nunjucks.NodeResolveLoader("src/views"),
+    new nunjucks.FileSystemLoader("src/views"),
     {
       autoescape: true,
       trimBlocks: true,
