@@ -1,15 +1,19 @@
 {
   "scripts": {
-    "dev": "tsx watch src/index.tsx",
-    "build": "rm -rf dist/* && node esbuild.mjs"
+    "dev": "tsx watch  --watch-preserve-output src/app.tsx",
+    "build": "rm -rf dist/* && node esbuild.mjs",
+    "prod": "rm -rf dist/* && node esbuild.mjs && node dist/index.cjs"
   },
   "dependencies": {
     "@hono/node-server": "^1.11.1",
     "hono": "^4.2.8",
-    "hono-jsx-router": "^1.5.0"
+    "nunjucks": "^3.2.4"
   },
   "devDependencies": {
     "@types/node": "^20.11.17",
+    "esbuild-node-externals": "^1.13.0",
+    "@types/nunjucks": "^3.2.6",
+    "chokidar": "^3.6.0",
     "esbuild": "0.20.2",
     "tsx": "^4.7.1"
   },
