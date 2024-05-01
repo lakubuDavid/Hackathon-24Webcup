@@ -13,10 +13,14 @@
     "baseUrl": ".",
     "paths": {
       "@components/*": ["src/components/*"],
+      "@static/*":["src/static/*"],
     },
     // "allowImportingTsExtensions":true,
     // "emitDeclarationOnly": true,
     // "declaration": true,
+  },
+  "watchOptions": {
+    
   },
   "include": ["src/**/*"],      // File paths to include in compilation
   "exclude": ["node_modules"]   // File paths to exclude from compilation
