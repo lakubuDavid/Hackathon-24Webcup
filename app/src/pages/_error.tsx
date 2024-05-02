@@ -1,3 +1,5 @@
+import { Layout } from "./_layout";
+
 export default function ErrorPage({
   statusCode,
   error,
@@ -6,13 +8,15 @@ export default function ErrorPage({
   error: Error;
 }) {
   return (
-    <p>
-      <h1>{error.name}</h1>
-      {statusCode
-        ? `An error ${statusCode} occurred on server`
-        : "An error occurred on client"}
-      <hr />
-      {error.message}
-    </p>
+    <Layout>
+      <p>
+        <h1>{error.name}</h1>
+        {statusCode
+          ? `An error ${statusCode} occurred on server`
+          : "An error occurred on client"}
+        <hr />
+        {error.message}
+      </p>
+    </Layout>
   );
 }

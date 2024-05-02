@@ -1,6 +1,6 @@
 
 import nunjucks from "nunjucks";
-export const nunjucksRouter = (c:any,nun:nunjucks.Environment,nunExcludedPaths: any[],nunExcludedFiles: any[]) => {
+export const nunjucksRouter = (c:any,nun:nunjucks.Environment,nunExcludedPaths: any[],nunExcludedFiles: any[],parameters:any = {}) => {
       // Get the requests path
   let p = c.req.path.substring(1);
 
@@ -23,7 +23,7 @@ export const nunjucksRouter = (c:any,nun:nunjucks.Environment,nunExcludedPaths: 
   const temp = nun.getTemplate(p);
 
   try {
-    let h = temp.render({});
+    let h = temp.render({...parameters});
     // console.log(h);
     return c.html(h);
   } catch (e) {
