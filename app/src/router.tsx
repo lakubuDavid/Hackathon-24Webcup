@@ -14,14 +14,16 @@ router.get("/", (c) => {
 
 router.get("/*", (c) => {
   const nun = new nunjucks.Environment(
-    new nunjucks.FileSystemLoader("src/views"),
+    new nunjucks.FileSystemLoader(process.env.NODE_ENV == "production" ? "views": "src/views"),
     {
       autoescape: true,
       trimBlocks: true,
       watch: true,
     }
   );
-  return nunjucksRouter(c, nun, nunExcludedPaths, nunExcludedFiles);
+  return nunjucksRouter(c, nun, nunExcludedPaths, nunExcludedFiles, {
+    query:c.req.query()
+  });
 });
 
 export { router };

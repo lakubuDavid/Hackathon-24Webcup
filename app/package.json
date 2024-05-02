@@ -1,4 +1,5 @@
 {
+  "version": "18",
   "scripts": {
     "dev": "tsx watch  --watch-preserve-output src/app.tsx",
     "build": "rm -rf dist/* && node esbuild.mjs",

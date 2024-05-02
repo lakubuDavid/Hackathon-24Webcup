@@ -3,21 +3,32 @@ import * as esbuild from 'esbuild'
 
 
 await esbuild.build({
-  entryPoints: ['src/app.tsx'],
+  entryPoints: ['src/app.tsx', 'src/assets/**/*', 'src/views/**/*'],
   bundle: true,
-  outfile: "dist/index.cjs",
+  outdir: "dist/",
   platform: 'node',
   target: "node18",
   treeShaking: true,
-  // packages: 'external',
-  external:["fsevents"],
+  format: "cjs",
+  define: {
+    ["process.env.NODE_ENV"]: '"production"',
+  },
+
+  external: ["fsevents"],
   alias: {
     "@components/*": "src/components/*",
-    "@static/*":"src/static/*",
+    "@static/*": "src/static/*",
+    // "@views/*":"src/views/*"
   },
+  loader: {
+    [".html"]: "copy"
+  },
+  outExtension: {
+    [".js"]: ".cjs"
+  }
   // plugins: [nodeExternalsPlugin({
   //   allowList: ["hono","@hono/node-server"]
   // })],
 }).catch((err) => {
-    console.error(err);
+  console.error(err);
 })
