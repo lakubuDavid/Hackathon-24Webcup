@@ -22,7 +22,7 @@ app.get('/assets/*', serveStatic({ root: './src/' }))
 app.route("/", router)
 
 const port = 3000;
-console.log(`Server is running`);
+console.log(`Server is running http://localhost:3000`);
 
 serve({
   fetch: app.fetch,
