@@ -1,4 +1,4 @@
-{% macro reserveCard(itemName = "",imageUrl = "",id="",value="") %}
+{% macro reserveCard(itemName = "",imageUrl = "",id="",value="",required=false,isradio=false) %}
 <div class="_card d-flex flex-column g-4 align-items-center">
     <div class="pb-2">
         <h4 class="card-title">{{itemName}}</h4>
@@ -7,7 +7,8 @@
     <span>
         <div class="checkbox-wrapper-12">
             <div class="cbx">
-                <input type="checkbox" id="{{id}}" name="{{id}}[]" value="{{value}}">
+                <input {%if isradio %}type="radio" name="{{id}}[]" {%if required %}required{%endif%}{%else%}type="checkbox" name="{{id}}" {%endif%}
+                    value="{{value}}">
                 <label for="cbx-12"></label>
                 <svg fill="none" viewBox="0 0 15 14" height="14" width="15">
                     <path d="M2 8.36364L6.23077 12L13 2"></path>

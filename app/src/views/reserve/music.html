@@ -5,6 +5,7 @@
 
 {% block styles %}
 <link rel="stylesheet" href="/assets/css/ui/checkbox.css">
+<link rel="stylesheet" href="/assets/css/ui/button.css">
 {% endblock styles %}
 
 {% block content %}
@@ -14,15 +15,16 @@
     <h1 class="my-4">What Music do you want</h1>
     <form class="my-4 col" action="/reserve/menu.html">
         <div class="_card-grid p-5">
-            {{components.reserveCard("Rock","https://placehold.co/300x280/","id1")}}
-            {{components.reserveCard("Folk","https://placehold.co/300x280/","id2")}}
-            {{components.reserveCard("Jazz","https://placehold.co/300x280/","id3")}}
-            {{components.reserveCard("Traditional","https://placehold.co/300x280/","id4")}}
-            {{components.reserveCard("Pop","https://placehold.co/300x280/","id4")}}
+            {{components.reserveCard("Rock","https://placehold.co/300x280/","optMusicChoice","rock",true)}}
+            {{components.reserveCard("Folk","https://placehold.co/300x280/","optMusicChoice","folk",true)}}
+            {{components.reserveCard("Jazz","https://placehold.co/300x280/","optMusicChoice","jazz",true)}}
+            {{components.reserveCard("Traditional","https://placehold.co/300x280/","optMusicChoice","traditional",true)}}
+            {{components.reserveCard("Pop","https://placehold.co/300x280/","optMusicChoice","pop",true)}}
         </div>
 
-        <input type="submit" formaction="/reserve" class="btn btn-outline" value="Back">
-        <input type="submit" class=" btn btn-primary" value="Next">
+
+        <button type="submit" formaction="/reserve" class="">Back</button>
+        <button type="submit" class="">Next</button>
     </form>
 
 </main>

@@ -5,6 +5,7 @@
 
 {% block styles %}
 <link rel="stylesheet" href="/assets/css/ui/checkbox.css">
+<link rel="stylesheet" href="/assets/css/ui/button.css">
 {% endblock styles %}
 
 {% block content %}
@@ -12,16 +13,25 @@
 {# {% include "_components/header.html" %} #}
 <main class="container py-4">
     <h1 class="my-4">What Menu do you have in mind</h1>
-    <form class="my-4 col" action="#">
+    <form class="my-3 col" action="/reserve/dresscode.html">
         <div class="_card-grid p-5">
-            {{components.reserveCard("Indian Menu","https://placehold.co/300x280/","id1")}}
-            {{components.reserveCard("European Menu","https://placehold.co/300x280/","id2")}}
-            {{components.reserveCard("Maurician Menu","https://placehold.co/300x280/","id3")}}
-            {{components.reserveCard("French Menu","https://placehold.co/300x280/","id4")}}
+            {{components.reserveCard("Indian Menu","https://placehold.co/300x280/","optFoodMenu","indian")}}
+            {{components.reserveCard("European Menu","https://placehold.co/300x280/","optFoodMenu","european")}}
+            {{components.reserveCard("Maurician Menu","https://placehold.co/300x280/","optFoodMenu","maurician")}}
+            {{components.reserveCard("French Menu","https://placehold.co/300x280/","optFoodMenu","french")}}
         </div>
 
-        <input type="submit" formaction="/reserve/music" class="btn btn-outline" value="Back">
-        <input type="submit" class=" btn btn-primary" value="Next">
+        <div class="mb-3">
+            <label for="" class="form-label">Special requests or allergies ?</label>
+            <div class="mb-3">
+                <label for="txtFoodSpecialRequest" class="form-label"></label>
+                <textarea class="form-control" name="txtFoodSpecialRequest" id="txtFoodSpecialRequest" rows="1"></textarea>
+            </div>
+        </div>
+        
+
+        <button type="submit" formaction="/reserve/music">Back</button>
+        <button type="submit" >Next</button>
     </form>
 
 </main>

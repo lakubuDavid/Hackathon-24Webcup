@@ -2,6 +2,9 @@
 
 {% block title %} Reserve {% endblock title%}
 
+{% block styles %}
+<link rel="stylesheet" href="/assets/css/ui/button.css">
+{% endblock styles %}
 {% block content %}
 
 {# {% include "../_components/header.html" %} #}
@@ -22,13 +25,13 @@
                         <div class="mb-3">
                             <label for="txtName" class="form-label">Name</label>
                             <input type="text" name="txtName" id="txtName" class="form-control" placeholder="Your Name"
-                                aria-describedby="txtNameHelpText" />
+                                aria-describedby="txtNameHelpText"  required/>
                             <small id="txtNameHelpText" class="text-muted">The name on the reservation</small>
                         </div>
                         <div class="mb-3">
                             <label for="txtEmail" class="form-label">Email</label>
                             <input type="email" name="txtEmail" id="txtEmail" class="form-control"
-                                placeholder="Your email" aria-describedby="txtEmailHelp" />
+                                placeholder="Your email" aria-describedby="txtEmailHelp"  required/>
                             <small id="txtEmailHelp" class="text-muted">The email that will be contacted </small>
                         </div>
 
@@ -42,11 +45,11 @@
                         <div class="mb-3">
                             <label for="txtEventDate" class="form-label">Date</label>
                             <input type="date" name="txtEventDate" id="txtEventDate" class="form-control"
-                                placeholder="Your event's date" />
+                                placeholder="Your event's date"  required/>
                         </div>
                         <div class="mb-3">
                             <label for="txtEventsDescription" class="form-label">Infos on your event</label>
-                            <textarea class="form-control" name="txtEventsDescription" id="txtEventsDescription" placeholder="Tell us about your special event" rows="3"></textarea>
+                            <textarea class="form-control" name="txtEventsDescription" id="txtEventsDescription" placeholder="Tell us about your special event" rows="3" required></textarea>
                         </div>
                         <div class="mb-3">
                             <span>Target Age range</span><br>
@@ -62,7 +65,7 @@
                                         min="21"
                                         value="35"
                                         aria-describedby="txtMinAgeRangeHelp"
-                                    />
+                                     required/>
                                     <small id="txtMinAgeRangeHelp" class="text-muted">Minimum age range</small>
                                 </div>
                                 <div class="mb-3 col">
@@ -76,7 +79,7 @@
                                         max="120"
                                         value="40"
                                         aria-describedby="txtMaxAgerangeHelp"
-                                    />
+                                     required/>
                                     <small id="txtMaxAgerangeHelp" class="text-muted">maximum age range </small>
                                 </div>
                             </div>                            
@@ -86,9 +89,9 @@
                 </fieldset>
 
                 <div class="mb-3 row">
-                    <div class="offset-sm-4 col-sm-8 row">
-                        <button class="btn col">Cancel</button>
-                        <button type="submit" class="btn btn-primary col">
+                    <div class="offset-sm-4 col-sm-8 g-2 row">
+                        <button class=" col">Cancel</button>
+                        <button type="submit" class="col">
                             Next
                         </button>
                     </div>

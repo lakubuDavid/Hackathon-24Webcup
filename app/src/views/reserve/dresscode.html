@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% import "_components/reserveCard.html" as components %}
+
+{% block title %} Music {% endblock title%}
+
+{% block styles %}
+<link rel="stylesheet" href="/assets/css/ui/checkbox.css">
+<link rel="stylesheet" href="/assets/css/ui/button.css">
+{% endblock styles %}
+
+{% block content %}
+
+{# {% include "_components/header.html" %} #}
+<main class="container py-4">
+    <h1 class="my-4">What dress code do you expect</h1>
+    <form class="my-4 col" action="/reserve/finalize.html">
+        <div class="_card-grid p-5">
+            {{components.reserveCard("Classic","https://placehold.co/300x280/","optDressCode","classic",true,true)}}
+            {{components.reserveCard("Formal","https://placehold.co/300x280/","optDressCode","formal",true,true)}}
+            {{components.reserveCard("Street Chic","https://placehold.co/300x280/","optDressCode","street-chic",true,true)}}
+            {{components.reserveCard("Bal Masqué","https://placehold.co/300x280/","optDressCode","bal-masqué",true,true)}}
+        </div>
+
+
+        <button type="submit" formaction="/reserve/menu" class="">Back</button>
+        <button type="submit" class="">Next</button>
+    </form>
+
+</main>
+{% include "_components/footer.html" %}
+
+{% endblock %}
