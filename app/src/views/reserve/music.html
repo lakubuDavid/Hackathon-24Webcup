@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% import "_components/reserveCard.html" as components %}
+
+{% block title %} Music {% endblock title%}
+
+{% block styles %}
+    <link rel="stylesheet" href="/assets/css/ui/checkbox.css">
+{% endblock styles %}
+
+{% block content %}
+
+{% include "_components/header.html" %}
+<main>
+    <h1>What Music do you want</h1>
+    {{components.reserveCard("Folk","https://placehold.co/300x280/","id1")}}
+    {{components.reserveCard("Folk","https://placehold.co/300x280/","id2")}}
+</main>
+{% include "_components/footer.html" %}
+
+{% endblock %}
