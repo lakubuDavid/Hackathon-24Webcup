@@ -1,0 +1,62 @@
+{% extends "base.html"%} {# Inherit the base.html page #}
+
+
+{% block title %} Test page {% endblock title%}
+
+{% block content %}
+
+{% include "_components/header.html" %}
+
+<main>
+  <div class="container text-center">
+    <h1>Services</h1>
+    <section class=" text-start ">
+      <h2>Catering Menus</h2>
+      <hr>
+      <div class="catalogue d-flex flex-column flex-md-wrap g-4 m-4">
+        <div class="catalogue-item row-md col align-items-center g-2 p-2">
+          <div class="col-md-4 row-4">
+            <img src="#" width="100%" height="300" alt="">
+          </div>
+          <div class="col-md-8 row-8">
+            <h2>Some Title</h2>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure voluptates assumenda autem unde tempora aut
+              nisi, et optio voluptatibus magnam asperiores quam, delectus libero culpa? Corrupti natus veniam placeat
+              laboriosam corporis eos, ipsum ea exercitationem praesentium dicta ab mollitia eligendi?
+            </p>
+          </div>
+        </div>
+        <div class="catalogue-item row-md col align-items-center g-2 p-2">
+          <div class="col-md-4 row-4">
+            <img src="#" width="100%" height="300" alt="">
+          </div>
+          <div class="col-md-8 row-8">
+            <h2>Some Title</h2>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure voluptates assumenda autem unde tempora aut
+              nisi, et optio voluptatibus magnam asperiores quam, delectus libero culpa? Corrupti natus veniam placeat
+              laboriosam corporis eos, ipsum ea exercitationem praesentium dicta ab mollitia eligendi?
+            </p>
+          </div>
+        </div>
+        <div class="catalogue-item row-md col align-items-center g-2 p-2">
+          <div class="col-md-4 row-4">
+            <img src="#" width="100%" height="300" alt="">
+          </div>
+          <div class="col-md-8 row-8">
+            <h2>Some Title</h2>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure voluptates assumenda autem unde tempora aut
+              nisi, et optio voluptatibus magnam asperiores quam, delectus libero culpa? Corrupti natus veniam placeat
+              laboriosam corporis eos, ipsum ea exercitationem praesentium dicta ab mollitia eligendi?
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+{% include "_components/footer.html" %}
+{% endblock content %}

@@ -1,5 +1,6 @@
 * {
     font-family:  Raleway, sans-serif;
+    transition: all 100ms ease-in-out;
 }
 
 body{
@@ -12,8 +13,11 @@ section {
     min-height: 400px;
 }
 
+main{
+    min-height: 80vh;
+}
+
 #hero-section {
-    height:70vh;
     width: 100vw;
     background-color: #e2e2e2;
     display: flex;
@@ -21,14 +25,20 @@ section {
     align-items: center;
 }
 
-#testimonial{
+.testimonial{
     background-color: #000;
     width: 100vw;
     height:500px;
 
-    font-size: 20pt;
     font-weight: 300;
     color:#fff;
+}
+
+@media (min-width:760px) {
+    
+}
+@media (max-width:760px) {
+    
 }
 
 #page-footer{
@@ -41,16 +51,20 @@ color: #fff;
 list-style: none;
 display: flex;
 flex-direction: column;
-gap:5px;
+
 }
 
 a{
     text-decoration: none;
 }
 a:hover{
-    letter-spacing: 0.2px;
+    /* letter-spacing: 0.2px; */
 }
 
 .link-light{
     color:#f1d5b2;
+}
+
+.catalogue{
+    gap:20px;
 }

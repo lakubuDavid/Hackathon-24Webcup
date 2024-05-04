@@ -1,0 +1,45 @@
+{% extends "../base.html"%} {# Inherit the base.html page #}
+
+{% block title %} Reserve {% endblock title%}
+
+{% block content %}
+
+{% include "../_components/header.html" %}
+
+<main>
+    <div class="container">
+        <h1>Reserve</h1>
+        {# Contacts #}
+        <hr>
+        <h2>Contact Info</h2>
+        <div class="container">
+            <form>
+                <div class="mb-3 row">
+                    <label for="inputName" class="col-4 col-form-label">Name</label>
+                    <div class="col-8">
+                        <input type="text" class="form-control" name="inputName" id="inputName" placeholder="Name" />
+                    </div>
+                </div>
+                <fieldset class="mb-3 row">
+                    <legend class="col-form-legend col-4">
+                        Group name
+                    </legend>
+                    <div class="col-8">
+                        you can use radio and checkboxes here
+                    </div>
+                </fieldset>
+                <div class="mb-3 row">
+                    <div class="offset-sm-4 col-sm-8">
+                        <button type="submit" class="btn btn-primary">
+                            Action
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</main>
+
+{% include "../_components/footer.html" %}
+{% endblock content %}
