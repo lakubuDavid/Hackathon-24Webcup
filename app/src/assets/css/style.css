@@ -18,7 +18,6 @@
 
 * {
     font-family:  Raleway, sans-serif;
-    transition: all 100ms ease-in-out;
 }
 
 body{
@@ -47,7 +46,9 @@ blockquote {
     font-style: oblique;
 }
 
-#hero-section {
+#hero_action-carousel{
+    height:70vh;
+    max-height: 70vh;
     width: 100vw;
     background-color: #e2e2e2;
     display: flex;
@@ -55,11 +56,34 @@ blockquote {
     align-items: center;
 }
 
+
 .navbar-brand{
     font-family: GreatVibes,"ZT Ravigsfen";
     font-size: 28pt;
     /* font-variant:sta; */
     /* font-style: oblique; */
+}
+
+#hero-text{
+position: absolute;
+z-index: 20;
+width: 100vw;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 3rem;
+color:#fff;
+}
+
+#hero_action-carousel img{
+    width: 100%;
+    object-fit: cover;
+}
+
+#navBar{
+    position: relative;
+    z-index: 2000;
 
 }
 
@@ -70,16 +94,10 @@ blockquote {
     width: 100vw;
     height:500px;
 
+    font-size: 20pt;
     font-weight: 300;
     font-style: oblique;
     color:#fff;
-}
-
-@media (min-width:760px) {
-    
-}
-@media (max-width:760px) {
-    
 }
 
 #page-footer{
@@ -92,7 +110,7 @@ color: #fff;
 list-style: none;
 display: flex;
 flex-direction: column;
-
+gap:5px;
 }
 
 a{
@@ -100,7 +118,7 @@ a{
     text-decoration: none;
 }
 a:hover{
-    /* letter-spacing: 0.2px; */
+    letter-spacing: 0.2px;
 }
 
 .link-light{
