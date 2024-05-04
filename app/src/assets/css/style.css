@@ -144,6 +144,8 @@ a:hover{
 
 ._card img{
     margin: 5px;
+    object-fit: cover;
+    object-position: top;
 }
 
 
