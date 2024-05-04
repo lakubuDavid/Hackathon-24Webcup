@@ -1,17 +1,17 @@
 @font-face{
     font-family: Raleway;
-    src: url(../fonts/Raleway.ttf);
+    src: url(/assets/fonts/Raleway.ttf);
 
 }
 
 @font-face {
     font-family: Farsan ;
-    src: url(../fonts/Farsan-Regular.ttf);
+    src: url(/assets/fonts/Farsan-Regular.ttf);
 }
 
 @font-face {
     font-family: GreatVibes;
-    src: url(../fonts/GreatVibes-Regular.ttf);
+    src: url(/assets/fonts/GreatVibes-Regular.ttf);
 }
 
 
@@ -58,10 +58,10 @@ blockquote {
 
 
 .navbar-brand{
-    font-family: GreatVibes,"ZT Ravigsfen";
+    font-family: "Great Vibes";
     font-size: 28pt;
     /* font-variant:sta; */
-    /* font-style: oblique; */
+    font-style: oblique;
 }
 
 #hero-text{
