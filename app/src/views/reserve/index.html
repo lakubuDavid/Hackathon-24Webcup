@@ -4,15 +4,15 @@
 
 {% block content %}
 
-{% include "../_components/header.html" %}
+{# {% include "../_components/header.html" %} #}
 
 <main>
-    <div class="container">
+    <section class="container py-4">
         <h1>Reserve now</h1>
         {# Contacts #}
         <hr>
-        <div class="container">
-            <form>
+        <div class="container py-4">
+            <form action="/reserve/music.html">
 
                 <fieldset class="mb-3 row">
                     <legend class="col-form-legend col-4">
@@ -96,7 +96,7 @@
             </form>
         </div>
 
-    </div>
+    </section>
 </main>
 
 {% include "../_components/footer.html" %}
