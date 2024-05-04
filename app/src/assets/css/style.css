@@ -68,3 +68,7 @@ a:hover{
 .catalogue{
     gap:20px;
 }
+
+._card{
+    width:300px;
+}
