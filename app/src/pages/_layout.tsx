@@ -15,8 +15,7 @@ export const Layout = ({
   script,
   children,
 }: PropsWithChildren<PageMeta>) => {
-
-  return ( 
+  return (
     <>
       <html>
         <head>
@@ -28,10 +27,21 @@ export const Layout = ({
             crossorigin="anonymous"
           />
           <link href="/assets/style.css" rel="stylesheet" />
+          <link href="/assets/preloader.css" rel="stylesheet" />
 
+          <script src="/assets/preloader.js"></script>
           <Style />
         </head>
-        <body>{children}</body>
+        <body>
+          <div id="preloader">
+            <div class="loader">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+          </div>
+          {children}
+        </body>
         <script
           src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
           integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

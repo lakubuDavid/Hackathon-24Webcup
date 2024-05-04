@@ -1,0 +1,19 @@
+
+@media (min-width:760px) {
+    .testimonial{
+        font-size: 20pt;
+    }
+
+    #hero-section{
+        height: 60vh;
+    }
+}
+@media (max-width:760px) {
+    .testimonial{
+        font-size: 17pt;
+    }
+
+    #hero-section{
+        height: 40vh;
+    }
+}

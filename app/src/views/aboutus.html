@@ -1,0 +1,55 @@
+{% extends "base.html"%} {# Inherit the base.html page #}
+
+
+{% block title %} Test page {% endblock title%}
+
+{% block content %}
+
+{% include "_components/header.html" %}
+<div class="container">
+    <h1 class="text-center mt-5">About Us - Royal RendezVous</h1>
+    <p class="text-center">
+        At Royal RendezVous, we specialize in curating exquisite experiences for both social and professional events. Our team is dedicated to providing bespoke services tailored to your every need, ensuring that your gatherings are nothing short of extraordinary.
+    </p>
+    <div class="row mt-5">
+        <div class="col-md-6">
+            <h2>Our Mission</h2>
+            <p>
+                We strive to elevate every occasion to a level of sophistication and elegance that is truly royal. Whether it's a glamorous soirée or a corporate event, we aim to create memorable moments that leave a lasting impression on you and your guests.
+            </p>
+        </div>
+        <div class="col-md-6">
+            <h2>What We Offer</h2>
+            <ul>
+                <li><i class="fas fa-crown text-primary"></i> <strong class="text-primary">Experience:</strong> With years of experience in the industry, we have mastered the art of creating unforgettable moments.</li>
+                <li><i class="fas fa-gem text-secondary"></i> <strong class="text-secondary">Attention to Detail:</strong> We leave no stone unturned in ensuring that every element of your event is flawless.</li>
+                <li><i class="fas fa-heart text-danger"></i> <strong class="text-danger">Passion:</strong> We are passionate about what we do, and it reflects in the exceptional service we provide.</li>
+            </ul>
+            
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-md-6">
+            <h2>Why Choose Royal RendezVous?</h2>
+            <ul>
+                <li><strong>Experience:</strong> With years of experience in the industry, we have mastered the art of creating unforgettable moments.</li>
+                <li><strong>Attention to Detail:</strong> We leave no stone unturned in ensuring that every element of your event is flawless.</li>
+                <li><strong>Passion:</strong> We are passionate about what we do, and it reflects in the exceptional service we provide.</li>
+            </ul>
+        </div>
+        <div class="col-md-6 text-center">
+            <img src="https://via.placeholder.com/500" alt="Placeholder Image" class="img-fluid rounded mb-4">
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-md-8 offset-md-2 text-center">
+            <h2 class="mb-4">Get in Touch</h2>
+            <p>
+                Let us turn your vision into reality. Contact us today to discuss how we can make your next event a royal affair to remember.
+            </p>
+            <a href="#" class="btn btn-primary mt-3">Contact Us</a>
+        </div>
+    </div>
+</div>
+{% include "_components/footer.html" %}
+{% endblock content %}

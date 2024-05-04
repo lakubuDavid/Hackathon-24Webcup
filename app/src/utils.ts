@@ -3,7 +3,7 @@ import nunjucks from "nunjucks";
 export const nunjucksRouter = (c:any,nun:nunjucks.Environment,nunExcludedPaths: any[],nunExcludedFiles: any[],parameters:any = {}) => {
       // Get the requests path
   let p = c.req.path.substring(1);
-
+  if(p.endsWith("/")) p += "index"
   // Add the html extension if needed
   if(!p.endsWith(".html")) p += ".html"
 
@@ -27,6 +27,7 @@ export const nunjucksRouter = (c:any,nun:nunjucks.Environment,nunExcludedPaths: 
     // console.log(h);
     return c.html(h);
   } catch (e) {
+    
     return c.notFound();
   }
 }

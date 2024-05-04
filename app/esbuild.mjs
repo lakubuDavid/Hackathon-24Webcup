@@ -1,9 +1,11 @@
 import * as esbuild from 'esbuild'
+import { copy } from 'esbuild-plugin-copy';
+
 // import { nodeExternalsPlugin } from 'esbuild-node-externals';
 
 
 await esbuild.build({
-  entryPoints: ['src/app.tsx', 'src/assets/**/*', 'src/views/**/*'],
+  entryPoints: ['src/app.tsx', 'src/views/**/*'],
   bundle: true,
   outdir: "dist/",
   platform: 'node',
@@ -13,22 +15,27 @@ await esbuild.build({
   define: {
     ["process.env.NODE_ENV"]: '"production"',
   },
-
-  external: ["fsevents"],
+  external: ["fsevents","./src/assets/"],
   alias: {
     "@components/*": "src/components/*",
     "@static/*": "src/static/*",
-    // "@views/*":"src/views/*"
   },
   loader: {
     [".html"]: "copy"
   },
   outExtension: {
     [".js"]: ".cjs"
-  }
-  // plugins: [nodeExternalsPlugin({
-  //   allowList: ["hono","@hono/node-server"]
-  // })],
+  },
+  plugins: [copy({
+    // this is equal to process.cwd(), which means we use cwd path as base path to resolve `to` path
+    // if not specified, this plugin uses ESBuild.build outdir/outfile options as base path.
+    resolveFrom: 'cwd',
+    assets: {
+      from: ['./src/assets/**/*'],
+      to: ['./dist/assets/'],
+    },
+    watch: true,
+  }),]
 }).catch((err) => {
   console.error(err);
 })

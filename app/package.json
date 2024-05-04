@@ -12,10 +12,11 @@
   },
   "devDependencies": {
     "@types/node": "^20.11.17",
-    "esbuild-node-externals": "^1.13.0",
     "@types/nunjucks": "^3.2.6",
     "chokidar": "^3.6.0",
     "esbuild": "0.20.2",
+    "esbuild-node-externals": "^1.13.0",
+    "esbuild-plugin-copy": "^2.1.1",
     "tsx": "^4.7.1"
   },
   "type": "module"
