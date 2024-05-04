@@ -1,0 +1,41 @@
+{% extends "base.html"%} {# Inherit the base.html page #}
+
+
+{% block title %} Test page {% endblock title%}
+
+{% block content %}
+
+{% include "_components/header.html" %}
+
+
+<main class="d-flex justify-content-center align-items-center  h-100">
+    <div>
+        <img src="image.jpeg" alt="this" width="500" height="300">
+    </div>
+    <section id="contactus-form" class="m-2">
+        <h3>Contact Us</h3>
+        <form>
+            <div class="form-group">
+                <label for="username">Name:</label>
+                <input type="text"id="username" name="username">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email"  id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="tel">Phone Number:</label>
+                <input type="tel" class="form-control" id="tel" name="tel">
+            </div>
+            <div class="form-group">
+                <label for="reasons">Reasons:</label>
+                <textarea class="form-control" id="reasons" name="reasons"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </section>
+</main>
+
+
+{% include "_components/footer.html" %}
+{% endblock content %}
