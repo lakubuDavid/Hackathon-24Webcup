@@ -14,6 +14,16 @@
 <main class="container py-4">
     <h1 class="my-4">What Menu do you have in mind</h1>
     <form class="my-3 col" action="/reserve/dresscode.html">
+        {# Hidden fields #}
+        <input type="hidden" name="txtName" id="txtName" value="{{query.txtName}}">
+        <input type="hidden" name="txtEmail" id="txtEmail" value="{{query.txtEmail}}">
+        <input type="hidden" name="txtEventDate" id="txtEventDate" value="{{query.txtEventDate}}">
+        <input type="hidden" name="txtEventsDescription" id="txtEventsDescription" value="{{query.txtEventsDescription}}">
+        <input type="hidden" name="txtMaxAgeRange" id="txtMaxAgeRange" value="{{query.txtMaxAgeRange}}">
+        <input type="hidden" name="txtMinAgeRange" id="txtMinAgeRange" value="{{query.txtMinAgeRange}}">
+
+        <input type="hidden" name="optMusicChoice" id="optMusicChoice" value="{{query.optMusicChoice}}">
+        {# End Hidden fields #}
         <div class="_card-grid p-5">
             {{components.reserveCard("Indian Menu","https://placehold.co/300x280/","optFoodMenu","indian")}}
             {{components.reserveCard("European Menu","https://placehold.co/300x280/","optFoodMenu","european")}}

@@ -14,6 +14,21 @@
 <main class="container py-4">
     <h1 class="my-4">What dress code do you expect</h1>
     <form class="my-4 col" action="/reserve/finalize.html">
+                {# Hidden fields #}
+                <input type="hidden" name="txtName" id="txtName" value="{{query.txtName}}">
+                <input type="hidden" name="txtEmail" id="txtEmail" value="{{query.txtEmail}}">
+                <input type="hidden" name="txtEventDate" id="txtEventDate" value="{{query.txtEventDate}}">
+                <input type="hidden" name="txtEventsDescription" id="txtEventsDescription" value="{{query.txtEventsDescription}}">
+                <input type="hidden" name="txtMaxAgeRange" id="txtMaxAgeRange" value="{{query.txtMaxAgeRange}}">
+                <input type="hidden" name="txtMinAgeRange" id="txtMinAgeRange" value="{{query.txtMinAgeRange}}">
+        
+                <input type="hidden" name="optMusicChoice" id="optMusicChoice" value="{{query.optMusicChoice}}">
+
+                <input type="hidden" name="optFoodMenu" id="optFoodMenu" value="{{query.optFoodMenu}}">
+                <input type="hidden" name="txtFoodSpecialRequest" id="txtFoodSpecialRequest" value="{{query.txtFoodSpecialRequest}}">
+                
+                <input type="hidden" name="optDressCode" id="optDressCode" value="{{query.optDressCode}}">
+                {# End Hidden fields #}
         <div class="_card-grid p-5">
             {{components.reserveCard("Classic","https://placehold.co/300x280/","optDressCode","classic",true,true)}}
             {{components.reserveCard("Formal","https://placehold.co/300x280/","optDressCode","formal",true,true)}}

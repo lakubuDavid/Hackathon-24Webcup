@@ -14,6 +14,14 @@
 <main class="container py-4">
     <h1 class="my-4">What Music do you want</h1>
     <form class="my-4 col" action="/reserve/menu.html">
+        {# Hidden fields #}
+        <input type="hidden" name="txtName" id="txtName" value="{{query.txtName}}">
+        <input type="hidden" name="txtEmail" id="txtEmail" value="{{query.txtEmail}}">
+        <input type="hidden" name="txtEventDate" id="txtEventDate" value="{{query.txtEventDate}}">
+        <input type="hidden" name="txtEventsDescription" id="txtEventsDescription" value="{{query.txtEventsDescription}}">
+        <input type="hidden" name="txtMaxAgeRange" id="txtMaxAgeRange" value="{{query.txtMaxAgeRange}}">
+        <input type="hidden" name="txtMinAgeRange" id="txtMinAgeRange" value="{{query.txtMinAgeRange}}">
+        {# End Hidden fields #}
         <div class="_card-grid p-5">
             {{components.reserveCard("Rock","https://placehold.co/300x280/","optMusicChoice","rock",true)}}
             {{components.reserveCard("Folk","https://placehold.co/300x280/","optMusicChoice","folk",true)}}
