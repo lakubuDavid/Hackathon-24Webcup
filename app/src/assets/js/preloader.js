@@ -13,8 +13,11 @@ function fadeOutEffect(target) {
 }
 
 document.addEventListener("DOMContentLoaded", function (event) {
+    // console.log("startted")
     const loader = document.querySelector("#preloader")
+    // fadeOutEffect(loader)
     setTimeout(() => {
         fadeOutEffect(loader)
+        // console.log("done")
     }, 200);
 });

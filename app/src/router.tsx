@@ -9,7 +9,24 @@ const nunExcludedPaths = ["_components"];
 const nunExcludedFiles = ["base.html"];
 
 router.get("/", (c) => {
-  return c.html(<HomePage></HomePage>);
+  const nun = new nunjucks.Environment(
+    new nunjucks.FileSystemLoader(process.env.NODE_ENV == "production" ? "views": "src/views"),
+    {
+      autoescape: true,
+      trimBlocks: true,
+      watch: true,
+    }
+  );
+
+  const temp = nun.getTemplate("index.html");
+
+  try {
+    let h = temp.render({});
+    // console.log(h);
+    return c.html(h);
+  } catch (e) {
+    return c.notFound();
+  }
 });
 
 router.get("/*", (c) => {

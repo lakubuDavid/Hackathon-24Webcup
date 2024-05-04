@@ -1,0 +1,43 @@
+{% extends "base.html"%} {# Inherit the base.html page #}
+
+
+{% block title %} Test page {% endblock title%}
+
+{% block content %}
+
+{% include "_components/header.html" %}
+
+<main>
+  <section id="hero-section">
+
+  </section>
+  <section class="text-center justify-content-center align-items-center g-4 w-100 p-4 d-flex flex-column">
+    <h2>Some Title</h2>
+    <hr>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure delectus voluptates obcaecati unde sequi cum rem
+      nobis
+      sunt quaerat est.
+    </p>
+  </section>
+  <section id="testimonial" class="d-flex flex-column justify-content-center align-items-center text-center p-5">
+    <p class="m-5 w-md-50">
+      " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, nemo doloremque. Possimus consectetur veritatis
+      unde non cumque sapiente nostrum, quisquam rerum, assumenda, dolorem nemo animi? Ipsam itaque recusandae sapiente.
+      Incidunt! "
+    </p>
+    <span> - A client</span>
+  </section>
+  <section class="d-flex flex-column justify-content-center align-items-center text-center p-5">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores rerum ipsum incidunt impedit modi facilis harum
+      ipsam, voluptates ullam officia, quod vero dolore odit totam eum et, explicabo atque adipisci.</p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, cumque, autem velit possimus atque perferendis
+      omnis amet magnam culpa at rem! Libero, et repudiandae, dignissimos omnis maiores facilis sed in rerum ab delectus
+      rem aliquam ex totam voluptatibus odio qui!
+    </p>
+  </section>
+</main>
+
+{% include "_components/footer.html" %}
+{% endblock content %}
