@@ -18,6 +18,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
     // fadeOutEffect(loader)
     setTimeout(() => {
         fadeOutEffect(loader)
-        // console.log("done")
+        console.log("done")
     }, 200);
 });

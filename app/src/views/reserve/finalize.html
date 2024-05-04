@@ -1,0 +1,40 @@
+{% extends "../base.html" %}
+
+{% block title %}
+
+{% endblock title %}
+
+{% block styles %}
+<link rel="stylesheet" href="/assets/css/ui/button.css">
+{% endblock styles %}
+
+{% block content %}
+{% include "../_components/header.html" %}
+<main>
+<div class=" text-center ">
+    <div class="d-flex flex-column justify-content-center align-items-center h-100">
+        <div class="row">
+            <div class="col">
+                <h1 class="my-4">Thank you for your reservation</h1>
+                <p>We will contact you shortly</p>
+                <i class="fas fa-check-circle"></i>
+                <hr>
+                <p>Reservation Name: {{query.txtName}}</p>
+                <p>Reservation Email: {{query.txtEmail}}</p>
+                <p>Event Date : {{query.txtEventDate}}</p>
+                <p>Event Description : {{query.txtEventsDescription}}</p>
+                <p>Max Age Range : {{query.txtMaxAgeRange}}</p>
+                <p>Min Age Range : {{query.txtMinAgeRange}}</p>
+                <p>Music Choice : {{query.optMusicChoice}}</p>
+                <p>Dress Code : {{query.optDressCode}}</p>
+                <p>Food Choice : {{query.optFoodMenu}}</p>
+                <p>Food Special Request : {{query.txtFoodSpecialRequest}}</p>
+                <hr>
+                <a href="/ " class="btn">Go Home</a>
+            </div>
+        </div>
+    </div>
+</div>
+</main>
+{% include "../_components/footer.html" %}
+{% endblock content %}

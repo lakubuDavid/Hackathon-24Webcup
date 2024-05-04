@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% import "_components/reserveCard.html" as components %}
+
+{% block title %} Music {% endblock title%}
+
+{% block styles %}
+<link rel="stylesheet" href="/assets/css/ui/checkbox.css">
+<link rel="stylesheet" href="/assets/css/ui/button.css">
+{% endblock styles %}
+
+{% block content %}
+
+{# {% include "_components/header.html" %} #}
+<main class="container py-4">
+    <h1 class="my-4">What dress code do you expect</h1>
+    <form class="my-4 col" action="/reserve/finalize.html">
+                {# Hidden fields #}
+                <input type="hidden" name="txtName" id="txtName" value="{{query.txtName}}">
+                <input type="hidden" name="txtEmail" id="txtEmail" value="{{query.txtEmail}}">
+                <input type="hidden" name="txtEventDate" id="txtEventDate" value="{{query.txtEventDate}}">
+                <input type="hidden" name="txtEventsDescription" id="txtEventsDescription" value="{{query.txtEventsDescription}}">
+                <input type="hidden" name="txtMaxAgeRange" id="txtMaxAgeRange" value="{{query.txtMaxAgeRange}}">
+                <input type="hidden" name="txtMinAgeRange" id="txtMinAgeRange" value="{{query.txtMinAgeRange}}">
+        
+                <input type="hidden" name="optMusicChoice" id="optMusicChoice" value="{{query.optMusicChoice}}">
+
+                <input type="hidden" name="optFoodMenu" id="optFoodMenu" value="{{query.optFoodMenu}}">
+                <input type="hidden" name="txtFoodSpecialRequest" id="txtFoodSpecialRequest" value="{{query.txtFoodSpecialRequest}}">
+                
+                {# End Hidden fields #}
+        <div class="_card-grid p-5">
+            {{components.reserveCard("Classic","/assets/img/Dress/black-tie.jpg","optDressCode","classic",true,true)}}
+            {{components.reserveCard("Formal","/assets/img/Dress/eveningwear.jpg","optDressCode","formal",true,true)}}
+            {{components.reserveCard("Street Chic","/assets/img/Dress/Vintage.jpg","optDressCode","street-chic",true,true)}}
+            {{components.reserveCard("Bal Masqué","/assets/img/Dress/Masquerade.jpg","optDressCode","bal-masqué",true,true)}}
+        </div>
+
+
+        <button type="submit" formaction="/reserve/menu" class="">Back</button>
+        <button type="submit" class="">Next</button>
+    </form>
+
+</main>
+{% include "_components/footer.html" %}
+
+{% endblock %}

@@ -4,16 +4,37 @@
 {% block title %} Music {% endblock title%}
 
 {% block styles %}
-    <link rel="stylesheet" href="/assets/css/ui/checkbox.css">
+<link rel="stylesheet" href="/assets/css/ui/checkbox.css">
+<link rel="stylesheet" href="/assets/css/ui/button.css">
 {% endblock styles %}
 
 {% block content %}
 
-{% include "_components/header.html" %}
-<main>
-    <h1>What Music do you want</h1>
-    {{components.reserveCard("Folk","https://placehold.co/300x280/","id1")}}
-    {{components.reserveCard("Folk","https://placehold.co/300x280/","id2")}}
+{# {% include "_components/header.html" %} #}
+<main class="container py-4">
+    <h1 class="my-4">What Music do you want</h1>
+    <form class="my-4 col" action="/reserve/menu.html">
+        {# Hidden fields #}
+        <input type="hidden" name="txtName" id="txtName" value="{{query.txtName}}">
+        <input type="hidden" name="txtEmail" id="txtEmail" value="{{query.txtEmail}}">
+        <input type="hidden" name="txtEventDate" id="txtEventDate" value="{{query.txtEventDate}}">
+        <input type="hidden" name="txtEventsDescription" id="txtEventsDescription" value="{{query.txtEventsDescription}}">
+        <input type="hidden" name="txtMaxAgeRange" id="txtMaxAgeRange" value="{{query.txtMaxAgeRange}}">
+        <input type="hidden" name="txtMinAgeRange" id="txtMinAgeRange" value="{{query.txtMinAgeRange}}">
+        {# End Hidden fields #}
+        <div class="_card-grid p-5">
+            {{components.reserveCard("Rock","/assets/img/music_1/classic.jpg","optMusicChoice","rock",true,true)}}
+            {{components.reserveCard("Folk","/assets/img/music_1/electronic.jpg","optMusicChoice","folk",true,true)}}
+            {{components.reserveCard("Jazz","/assets/img/music_1/jazz.jpg","optMusicChoice","jazz",true,true)}}
+            {{components.reserveCard("Traditional","/assets/img/music_1/indian.jpg","optMusicChoice","traditional",true,true)}}
+            {{components.reserveCard("Pop","/assets/img/music_1/musician.jpg","optMusicChoice","pop",true,true)}}
+        </div>
+
+
+        <button type="submit" formaction="/reserve" class="">Back</button>
+        <button type="submit" class="">Next</button>
+    </form>
+
 </main>
 {% include "_components/footer.html" %}
 

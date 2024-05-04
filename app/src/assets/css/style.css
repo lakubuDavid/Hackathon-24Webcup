@@ -1,3 +1,21 @@
+@font-face{
+    font-family: Raleway;
+    src: url(/assets/fonts/Raleway.ttf);
+
+}
+
+@font-face {
+    font-family: Farsan ;
+    src: url(/assets/fonts/Farsan-Regular.ttf);
+}
+
+@font-face {
+    font-family: GreatVibes;
+    src: url(/assets/fonts/GreatVibes-Regular.ttf);
+}
+
+
+
 * {
     font-family:  Raleway, sans-serif;
 }
@@ -6,6 +24,11 @@ body{
     max-width:100vw;
     max-height: 100vh;
     overflow-x: hidden;
+
+    background-color: #fff;
+    color:#343434;
+
+    font-size: 1.2em;
 }
 
 section {
@@ -13,7 +36,14 @@ section {
 }
 
 main{
-    min-height: 80vh;
+    min-height: 85vh;
+}
+
+blockquote {
+    font-family: Farsan;
+    font-size: 16pt;
+    font-weight: 300;
+    font-style: oblique;
 }
 
 #hero_action-carousel{
@@ -28,7 +58,7 @@ main{
 
 
 .navbar-brand{
-    font-family: GreatVibes,"ZT Ravigsfen";
+    font-family: "Great Vibes";
     font-size: 28pt;
     /* font-variant:sta; */
     /* font-style: oblique; */
@@ -57,20 +87,22 @@ color:#fff;
 
 }
 
-
 .testimonial{
+    font-family: Farsan;
+
     background-color: #000;
     width: 100vw;
     height:500px;
 
     font-size: 20pt;
     font-weight: 300;
+    font-style: oblique;
     color:#fff;
 }
 
 #page-footer{
 min-height: 200px;
-background-color: #434343;
+background-color: #7d6a5c;
 color: #fff;
 }
 
@@ -82,10 +114,11 @@ gap:5px;
 }
 
 a{
+    color:#c09867 !important;
     text-decoration: none;
 }
 a:hover{
-    letter-spacing: 0.2px;
+    letter-spacing: 0.1px;
 }
 
 .link-light{
@@ -95,7 +128,49 @@ a:hover{
 .catalogue{
     gap:20px;
 }
+.catalogue-item{
+    gap:20px;
+    padding:20px;
+}
+
+.catalogue-item h2{
+    color: #a97b45;
+    border-bottom: 1px solid #0004;
+}
 
 ._card{
     width:300px;
+    border-radius: 5px;
+    /* border:1px solid #0005; */
+    background-color: #fff;
+    padding:30px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
+}
+
+._card img{
+    margin: 5px;
+    object-fit: cover;
+    object-position: top;
+}
+
+
+._card-grid{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:25px;
+    justify-content: center;
+    align-items: center;
+    padding:20px;
+
+    transition: all 200ms cubic-bezier(0.68, -0.55, 0.265, 1.55);;
+}
+
+._card:hover{
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.045);
+    transform: rotate(1deg);
+}
+
+.btn{
+
 }
