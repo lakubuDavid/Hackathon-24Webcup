@@ -1,43 +1,200 @@
-{% extends "base.html"%} {# Inherit the base.html page #}
-
-
-{% block title %} Test page {% endblock title%}
-
-{% block content %}
-
-{% include "_components/header.html" %}
+{% extends "base.html"%} {# Inherit the base.html page #} {% block title %} Test
+page {% endblock title%} {% block content %} {% include
+"_components/header.html" %}
 
 <main>
-  <section id="hero-section">
+  <div id="hero_action-carousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img
+          src="assets/img/food/homepage/alcohol.jpg"
+          height="800px"
+          class="d-block w-90"
+          alt="..."
+        />
+      </div>
 
-  </section>
-  <section class="text-center justify-content-center align-items-center g-4 w-100 p-4 d-flex flex-column">
+      <div class="carousel-item">
+        <img
+          src="assets/img/food/homepage/fireworks.jpg"
+          height="800px"
+          class="d-block w-100"
+          alt="..."
+        />
+      </div>
+
+      <div class="carousel-item">
+        <img
+          src="assets/img/food/homepage/venetian_mask.jpg"
+          height="800px"
+          class="d-block w-100"
+          alt="..."
+        />
+      </div>
+
+      <div class="carousel-item">
+        <img
+          src="assets/img/food/homepage/wedding.jpg"
+          height="800px"
+          class="d-block w-100"
+          alt="..."
+        />
+      </div>
+
+      <div class="carousel-item">
+        <img
+          src="assets/img/food/homepage/woman_wed.jpg"
+          height="800px"
+          class="d-block w-100"
+          alt="..."
+        />
+      </div>
+
+      <div class="carousel-item">
+        <img
+          src="assets/img/food/homepage/woman.jpg"
+          height="800px"
+          class="d-block w-100"
+          alt="..."
+        />
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#hero_action-carousel"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#hero_action-carousel"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+    <div id="hero-text">Experience Unmatched Luxury</div>
+  </div>
+
+  <section
+    class="text-center justify-content-center align-items-center g-4 w-100 p-4 d-flex flex-column"
+  >
     <blockquote>
-      <p>"Elevate your soirées to new heights with Royal Rendez-vous. Our bespoke reservation service ensures every event is a masterpiece of luxury and sophistication."</p>
+      <p>
+        "Elevate your soirées to new heights with Royal Rendez-vous. Our bespoke
+        reservation service ensures every event is a masterpiece of luxury and
+        sophistication."
+      </p>
       <footer>— Royal Rendez-vous Team</footer>
     </blockquote>
-    
   </section>
-  <section  class="testimonial d-flex flex-column justify-content-center align-items-center text-center p-md-5">
-    <p class="m-5 w-md-50">
-      " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, nemo doloremque. Possimus consectetur veritatis
-      unde non cumque sapiente nostrum, quisquam rerum, assumenda, dolorem nemo animi? Ipsam itaque recusandae sapiente.
-      Incidunt! "
-    </p>
-    <span> - A client</span>
-  </section>
-  <section class="d-flex flex-column justify-content-center align-items-center text-center p-5">
-    <p>Have a question or ready to start planning your next event with Royal Rendez-vous? Contact us today! 
-      Our team is here to assist you every step of the way, ensuring your event is nothing short of extraordinary. 
-      Whether it's a grand soirée or an intimate gathering, we're dedicated to making your vision a reality.
+  <div id="testimonial-carousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <section
+          class="testimonial d-flex flex-column justify-content-center align-items-center text-center p-md-5"
+        >
+          <p class="m-5 w-md-50">
+            "Royal Rendez-vous made our event unforgettable! Their attention to
+            detail and personalized service truly exceeded our expectations."
+          </p>
+          <span> - John Smith,CEO</span>
+        </section>
+      </div>
+
+      <div class="carousel-item active">
+        <section
+          class="testimonial d-flex flex-column justify-content-center align-items-center text-center p-md-5"
+        >
+          <p class="m-5 w-md-50">
+            " Working with Royal Rendez-vous was a pleasure from start to
+            finish. Their professionalism and creativity brought our vision to
+            life in the most spectacular way."
+          </p>
+          <span> - Jane Smith, Director of Marketing</span>
+        </section>
+      </div>
+
+      <div class="carousel-item active">
+        <section
+          class="testimonial d-flex flex-column justify-content-center align-items-center text-center p-md-5"
+        >
+          <p class="m-5 w-md-50">
+            " I can't thank Royal Rendez-vous enough for the seamless execution
+            of our corporate gala. Their team's expertise and dedication ensured
+            a flawless event that left a lasting impression on our guests."
+          </p>
+          <span> - David Johnson, CEO</span>
+        </section>
+      </div>
+
+      <div class="carousel-item active">
+        <section
+          class="testimonial d-flex flex-column justify-content-center align-items-center text-center p-md-5"
+        >
+          <p class="m-5 w-md-50">
+            " Choosing Royal Rendez-vous for our wedding reception was the best
+            decision we made. Every aspect of the evening was meticulously
+            planned, and their team went above and beyond to make it magical."
+          </p>
+          <span> - Sarah and Michael Thompson, Newlyweds</span>
+        </section>
+      </div>
+
+      <div class="carousel-item active">
+        <section
+          class="testimonial d-flex flex-column justify-content-center align-items-center text-center p-md-5"
+        >
+          <p class="m-5 w-md-50">
+            " My surprise birthday party planned by Royal Rendez-vous was an
+            absolute success! The team coordinated everything seamlessly, and
+            seeing the smiles on my firends faces made it a truly unfrogettable
+            evening."
+          </p>
+          <span> - Mark Johnson, Surprise Birthday Recipient</span>
+        </section>
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#testimonial-carousel"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#testimonial-carousel"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <section
+    class="d-flex flex-column justify-content-center align-items-center text-center p-5"
+  >
+    <p>
+      Have a question or ready to start planning your next event with Royal
+      Rendez-vous? Contact us today! Our team is here to assist you every step
+      of the way, ensuring your event is nothing short of extraordinary. Whether
+      it's a grand soirée or an intimate gathering, we're dedicated to making
+      your vision a reality.
     </p>
     <p>
-      Feel free to reach out to us via phone, email, or by filling out the form below.
-      We look forward to hearing from you!
+      Feel free to reach out to us via phone, email, or by filling out the form
+      below. We look forward to hearing from you!
     </p>
     <button class="btn">Contact Us</button>
   </section>
 </main>
 
-{% include "_components/footer.html" %}
-{% endblock content %}
+{% include "_components/footer.html" %} {% endblock content %}
