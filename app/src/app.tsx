@@ -17,7 +17,7 @@ app.onError((err, c) => {
 app.notFound((c) => {
   return c.html(<Page404></Page404>,404);
 })
-app.get('/assets/*', serveStatic({ root: './src/' }))
+app.get('/assets/*', serveStatic({ root: process.env.NODE_ENV == 'production' ? './' : './src/' }))
 
 app.route("/", router)
 
