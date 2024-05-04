@@ -1,0 +1,60 @@
+{% extends "base.html"%} {# Inherit the base.html page #}
+
+
+{% block title %} Test page {% endblock title%}
+
+{% block content %}
+
+{% include "_components/header.html" %}
+<div class="container">
+    <h1 class="text-center mt-5">About Us - Royal RendezVous</h1>
+    <p class="text-center">
+        At Royal RendezVous, we specialize in curating exquisite experiences for both social and professional events. Our team is dedicated to providing bespoke services tailored to your every need, ensuring that your gatherings are nothing short of extraordinary.
+    </p>
+    <div class="row mt-5">
+        <div class="col-md-6">
+            <h2>Our Mission</h2>
+            <p>
+                We strive to elevate every occasion to a level of sophistication and elegance that is truly royal. Whether it's a glamorous soirée or a corporate event, we aim to create memorable moments that leave a lasting impression on you and your guests.
+            </p>
+        </div>
+        <div class="col-md-6">
+            <img src="https://via.placeholder.com/500x250" alt="Image" class="img-fluid rounded mb-4">
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-md-6">
+            <h2>What We Offer</h2>
+            <ul>
+                <li><i class="fas fa-star text-primary"></i> <strong class="text-primary">Exclusive Experiences:</strong> From luxurious soirées to corporate events, we create bespoke experiences tailored to your every need.</li>
+                <li><i class="fas fa-trophy text-secondary"></i> <strong class="text-secondary">Premium Services:</strong> Our extensive network of partners enables us to offer top-notch services, including catering, entertainment, decor, and more.</li>
+                <li><i class="fas fa-glass-cheers text-danger"></i> <strong class="text-danger">Memorable Moments:</strong> We believe in crafting moments that last a lifetime, ensuring that your gatherings are nothing short of extraordinary.</li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <h2>Why Choose Royal RendezVous?</h2>
+            <ul>
+                <li><i class="fas fa-crown text-primary"></i> <strong class="text-primary">Experience:</strong> With years of experience in the industry, we have mastered the art of creating unforgettable moments.</li>
+                <li><i class="fas fa-gem text-secondary"></i> <strong class="text-secondary">Attention to Detail:</strong> We leave no stone unturned in ensuring that every element of your event is flawless.</li>
+                <li><i class="fas fa-heart text-danger"></i> <strong class="text-danger">Passion:</strong> We are passionate about what we do, and it reflects in the exceptional service we provide.</li>
+                <li><i class="fas fa-star text-warning"></i> <strong class="text-warning">Exclusivity:</strong> We offer exclusive access to the most prestigious venues and services, ensuring that your event is truly one-of-a-kind.</li>
+                <li><i class="fas fa-lightbulb text-info"></i> <strong class="text-info">Creative Solutions:</strong> Our team is known for its creativity and innovation, crafting unique and memorable experiences tailored to your preferences.</li>
+                <li><i class="fas fa-user-tie text-success"></i> <strong class="text-success">Professionalism:</strong> From the initial planning stages to the execution of your event, we maintain the highest standards of professionalism and excellence.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-md-6">
+            <img src="https://via.placeholder.com/500x500" alt="Image" class="img-fluid rounded mb-4">
+        </div>
+        <div class="col-md-6">
+            <h2>Get in Touch</h2>
+            <p>
+                Let us turn your vision into reality. Contact us today to discuss how we can make your next event a royal affair to remember.
+            </p>
+            <a href="#" class="btn btn-primary mt-3">Contact Us</a>
+        </div>
+    </div>
+</div>
+{% include "_components/footer.html" %}
+{% endblock content %}
