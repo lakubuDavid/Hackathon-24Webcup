@@ -34,7 +34,11 @@ export const Layout = ({
         </head>
         <body>
           <div id="preloader">
-            <span class="loader"></span>
+            <div class="loader">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
           </div>
           {children}
         </body>
