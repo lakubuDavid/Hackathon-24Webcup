@@ -118,7 +118,7 @@ a{
     text-decoration: none;
 }
 a:hover{
-    letter-spacing: 0.2px;
+    letter-spacing: 0.1px;
 }
 
 .link-light{
@@ -131,6 +131,11 @@ a:hover{
 .catalogue-item{
     gap:20px;
     padding:20px;
+}
+
+.catalogue-item h2{
+    color: #a97b45;
+    border-bottom: 1px solid #0004;
 }
 
 ._card{
@@ -164,4 +169,8 @@ a:hover{
 ._card:hover{
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.045);
     transform: rotate(1deg);
+}
+
+.btn{
+
 }
