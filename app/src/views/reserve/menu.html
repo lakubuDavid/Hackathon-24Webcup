@@ -12,8 +12,9 @@
 
 {# {% include "_components/header.html" %} #}
 <main class="container py-4">
-    <h1 class="my-4">What Menu do you have in mind</h1>
-    <form class="my-3 col" action="/reserve/dresscode.html">
+    <h1 class="my-3">What Menu do you have in mind</h1>
+    <hr>
+    <form class="mb-3 col" action="/reserve/dresscode.html">
         {# Hidden fields #}
         <input type="hidden" name="txtName" id="txtName" value="{{query.txtName}}">
         <input type="hidden" name="txtEmail" id="txtEmail" value="{{query.txtEmail}}">
@@ -24,17 +25,16 @@
 
         <input type="hidden" name="optMusicChoice" id="optMusicChoice" value="{{query.optMusicChoice}}">
         {# End Hidden fields #}
-        <div class="_card-grid p-5">
+        <div class="_card-grid p-3">
             {{components.reserveCard("Indian Menu","/assets/img/food/middle_eastern.jpg","optFoodMenu","indian",true,true)}}
             {{components.reserveCard("European Menu","/assets/img/food/dessert.jpg","optFoodMenu","european",true,true)}}
             {{components.reserveCard("Maurician Menu","/assets/img/food/thai.jpg","optFoodMenu","maurician",true,true)}}
             {{components.reserveCard("French Menu","/assets/img/food/brazilian.jpg","optFoodMenu","french",true,true)}}
         </div>
 
-        <div class="mb-3">
-            <label for="" class="form-label">Special requests or allergies ?</label>
+        <div class="mb-3 mx-auto px-2 d-flex flex-column justify-content-center">
+            <label for="txtFoodSpecialRequest" class="form-label">Special requests or allergies ?</label>
             <div class="mb-3">
-                <label for="txtFoodSpecialRequest" class="form-label"></label>
                 <textarea class="form-control" name="txtFoodSpecialRequest" id="txtFoodSpecialRequest" rows="1"></textarea>
             </div>
         </div>
