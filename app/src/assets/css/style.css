@@ -33,7 +33,7 @@ body{
     background-color: #fff;
     color:#343434;
 
-    font-size: 1.2em;
+    font-size: 100%;
 }
 
 section {
@@ -46,7 +46,7 @@ main{
 
 blockquote {
     font-family: Farsan;
-    font-size: 16pt;
+    font-size: 1.4rem;
     font-weight: 300;
     font-style: oblique;
 }
@@ -65,7 +65,7 @@ blockquote {
 
 .navbar-brand{
     font-family: "Great Vibes";
-    font-size: 28pt;
+    font-size: 2.3rem;
     /* font-variant:sta; */
     /* font-style: oblique; */
 }
@@ -106,7 +106,7 @@ font-style: oblique;
     width: 100vw;
     height:500px;
 
-    font-size: 20pt;
+    font-size: 1.6rem;
     font-weight: 300;
     font-style: oblique;
     color:#fff;
