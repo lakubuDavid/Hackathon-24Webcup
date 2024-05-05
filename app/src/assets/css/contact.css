@@ -4,6 +4,8 @@ html {
   /* font-family: 'Montserrat', Arial, sans-serif; */
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+
+  font-size: 90%;
 }
 
 body {
@@ -52,7 +54,7 @@ form {
 
 h1 {
   color: #474544;
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 700;
   letter-spacing: 7px;
   text-align: center;
@@ -197,7 +199,7 @@ textarea {
 
 @media screen and (max-width: 480px) {
   h1 {
-    font-size: 26px;
+    font-size: 1.6rem;
   }
   
   .underline {
@@ -211,7 +213,7 @@ textarea {
 
 @media screen and (max-width: 420px) {
   h1 {
-    font-size: 18px;
+    font-size: 1.1rem;
   }
   
   .icon {
