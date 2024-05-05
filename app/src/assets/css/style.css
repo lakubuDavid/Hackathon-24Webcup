@@ -55,10 +55,11 @@ blockquote {
     height:70vh;
     max-height: 70vh;
     width: 100vw;
-    background-color: #e2e2e2;
+    /* background-color: #e2e2e2; */
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-y: hidden;
 }
 
 
@@ -92,7 +93,10 @@ font-style: oblique;
 #navBar{
     position: relative;
     z-index: 2000;
+    background-color: #bd8b6427;
 
+    border-bottom: 1px solid #be8a6052;
+    backdrop-filter: blur(5px);
 }
 
 .testimonial{
