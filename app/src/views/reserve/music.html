@@ -21,13 +21,15 @@
         <input type="hidden" name="txtEventsDescription" id="txtEventsDescription" value="{{query.txtEventsDescription}}">
         <input type="hidden" name="txtMaxAgeRange" id="txtMaxAgeRange" value="{{query.txtMaxAgeRange}}">
         <input type="hidden" name="txtMinAgeRange" id="txtMinAgeRange" value="{{query.txtMinAgeRange}}">
+
+        <input type="hidden" name="checkMusic" value="true">
         {# End Hidden fields #}
         <div class="_card-grid p-5">
-            {{components.reserveCard("Rock","/assets/img/music_1/classic.jpg","optMusicChoice","rock",true,true)}}
-            {{components.reserveCard("Folk","/assets/img/music_1/electronic.jpg","optMusicChoice","folk",true,true)}}
+            {{components.reserveCard("Classic","/assets/img/music_1/classic.jpg","optMusicChoice","classic",true,true)}}
+            {{components.reserveCard("Folk","/assets/img/music_1/musician.jpg","optMusicChoice","folk",true,true)}}
             {{components.reserveCard("Jazz","/assets/img/music_1/jazz.jpg","optMusicChoice","jazz",true,true)}}
             {{components.reserveCard("Traditional","/assets/img/music_1/indian.jpg","optMusicChoice","traditional",true,true)}}
-            {{components.reserveCard("Pop","/assets/img/music_1/musician.jpg","optMusicChoice","pop",true,true)}}
+            {{components.reserveCard("Pop","/assets/img/music_1/electronic.jpg","optMusicChoice","pop",true,true)}}
         </div>
 
 
